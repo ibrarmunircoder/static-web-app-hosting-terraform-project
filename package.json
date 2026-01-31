@@ -1,0 +1,17 @@
+{
+  "name": "hoobank-react-app-deployment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "tf:init": "terraform -chdir=./terraform init",
+    "tf:plan": "terraform -chdir=./terraform plan",
+    "tf:apply": "terraform -chdir=./terraform apply --auto-approve",
+    "tf:destroy": "terraform -chdir=./terraform destroy --auto-approve",
+    "build": "npm --prefix=./frontend run build",
+    "deploy": "run-s build tf:apply"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
