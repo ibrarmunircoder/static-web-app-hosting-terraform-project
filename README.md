@@ -19,13 +19,27 @@ This project demonstrates the end-to-end deployment of a production-ready React 
 
 ### ⚖️ Design Decisions:
 
-As you know, we have multiple solutions for a same problem. We can use different services on AWS to deploy this application. We should architect our project based on the requirements we are given.
+As you know, we have multiple solutions for the same problem. We can use different services on AWS to deploy this application. We should architect our project based on the requirements we are given.
 
 <strong>Amazon S3:</strong> Amazon S3 is used to host the React application’s static assets. Since the application is a static frontend, S3 allows us to store and serve files without provisioning or managing any underlying servers. S3 is highly scalable and highly available by design, automatically replicating data across multiple facilities to ensure durability and reliability. This makes it an ideal choice for storing frontend build artifacts.
 
-<strong>Amazon CloudFront:</strong> While S3 supports static website hosting, serving a frontend application directly from S3 is not recommended for production use in terms of security, performance, and cost optimization. S3 does not natively support custom domains with HTTPS when used alone, and high request volumes can lead to increased costs, as pricing scales linearly with the number of requests and data transfer.
+<strong>Amazon CloudFront:</strong> While S3 supports static website hosting, serving a frontend application directly from S3 is not recommended for production use in terms of security, performance, and cost optimisation. S3 does not natively support custom domains with HTTPS when used alone, and high request volumes can lead to increased costs, as pricing scales linearly with the number of requests and data transfer.
 
-Amazon CloudFront addresses these limitations by acting as a global Content Delivery Network (CDN) in front of S3. CloudFront caches application assets at edge locations closest to users, significantly reducing latency for a globally distributed audience. It also enables secure access via HTTPS, supports custom domain names, reduces direct load on S3, and helps optimize costs by minimizing repeated origin requests. This combination ensures fast, secure, and scalable delivery of the application to users worldwide.
+Amazon CloudFront addresses these limitations by acting as a global Content Delivery Network (CDN) in front of S3. CloudFront caches application assets at edge locations closest to users, significantly reducing latency for a globally distributed audience. It also enables secure access via HTTPS, supports custom domain names, reduces direct load on S3, and helps optimise costs by minimising repeated origin requests. This combination ensures fast, secure, and scalable delivery of the application to users worldwide.
+
+### 🚀 Key Features
+
+- **Infrastructure as Code (IaC)** using Terraform for automated and repeatable AWS provisioning  
+- **Remote Terraform state management** using Amazon S3 for centralized and reliable state storage  
+- **SSL/TLS certificates** provisioned and managed via AWS Certificate Manager (ACM)  
+- **Custom domain and DNS management** using Amazon Route 53  
+
+
+### 🚧 Challenges:
+
+- Debugged and fixed the S3 bucket policy syntax issues by changing the Principal component value.
+- Resolved Terraform state conflicts across teams by using remote state locking
+- Reused existing ACM certificate through Terraform data sources
 
 ### 🎯 Learning Objectives
 
