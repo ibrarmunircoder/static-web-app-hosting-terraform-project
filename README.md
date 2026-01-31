@@ -30,10 +30,10 @@ Amazon CloudFront addresses these limitations by acting as a global Content Deli
 ### 🎯 Learning Objectives
 
 <ul>
-Implement secure access patterns between CloudFront and S3
+
 <li>Understand how to deploy and host a React application using AWS S3 and CloudFront</li>
 <li>Learn how to design globally available frontend architectures using a CDN</li>
 <li>
 Gain hands-on experience with Terraform for Infrastructure as Code (IaC)</li>
-
+<li>Implement secure access patterns between CloudFront and S3</li>
 </ul>
