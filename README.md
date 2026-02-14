@@ -4,15 +4,21 @@
 
 This project demonstrates the end-to-end deployment of a production-ready React application on AWS using Terraform as Infrastructure as Code. The application is hosted on Amazon S3 for static asset storage and served globally through Amazon CloudFront for low-latency content delivery and HTTPS support. Terraform is used to provision and manage all AWS resources in a repeatable, version-controlled manner, showcasing best practices in cloud infrastructure automation, scalability, and security. This project highlights practical DevOps skills, including AWS architecture design, infrastructure automation, and modern frontend deployment workflows.
 
+---
+
 ### Live Demo:
 
 ![Live Demo Screenshot](./screenshots/app-screenshot.png)
+
+---
 
 
 ### Architecture Diagram:
 
 ![Diagram 1](./screenshots/arch-1.png)
 ![Diagram 2](./screenshots/arch-2.png)
+
+---
 
 ### ⚖️ Design Decisions:
 
@@ -24,6 +30,8 @@ As you know, we have multiple solutions for the same problem. We can use differe
 
 Amazon CloudFront addresses these limitations by acting as a global Content Delivery Network (CDN) in front of S3. CloudFront caches application assets at edge locations closest to users, significantly reducing latency for a globally distributed audience. It also enables secure access via HTTPS, supports custom domain names, reduces direct load on S3, and helps optimise costs by minimising repeated origin requests. This combination ensures fast, secure, and scalable delivery of the application to users worldwide.
 
+---
+
 ### 🚀 Key Features:
 
 - React application deployed as static assets to Amazon S3  
@@ -32,13 +40,17 @@ Amazon CloudFront addresses these limitations by acting as a global Content Deli
 - Custom domain configuration with Amazon Route 53  
 - Secure access between CloudFront and S3 (restricted origin access)  
 - Infrastructure provisioning using Terraform (Infrastructure as Code)  
-- Remote Terraform state management using Amazon S3 with locking  
+- Remote Terraform state management using Amazon S3 with locking
+
+---
 
 ### 🚧 Challenges:
 
 - Debugged and fixed the S3 bucket policy syntax issues by changing the Principal component value.
 - Resolved Terraform state conflicts across teams by using remote state locking
 - Reused existing ACM certificate through Terraform data sources
+
+---
 
 ### 🎯 Learning Objectives:
 
