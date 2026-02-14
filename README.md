@@ -13,7 +13,7 @@ I have a company frontend application designed and developed using a modern Reac
 ![Diagram 1](./screenshots/arch-1.png)
 ![Diagram 2](./screenshots/arch-2.png)
 
-### 🚀 Overview:
+### 📌 Project Overview:
 
 This project demonstrates the end-to-end deployment of a production-ready React application on AWS using Terraform as Infrastructure as Code. The application is hosted on Amazon S3 for static asset storage and served globally through Amazon CloudFront for low-latency content delivery and HTTPS support. Terraform is used to provision and manage all AWS resources in a repeatable, version-controlled manner, showcasing best practices in cloud infrastructure automation, scalability, and security. This project highlights practical DevOps skills, including AWS architecture design, infrastructure automation, and modern frontend deployment workflows.
 
@@ -29,11 +29,13 @@ Amazon CloudFront addresses these limitations by acting as a global Content Deli
 
 ### 🚀 Key Features
 
-- **Infrastructure as Code (IaC)** using Terraform for automated and repeatable AWS provisioning  
-- **Remote Terraform state management** using Amazon S3 for centralized and reliable state storage  
-- **SSL/TLS certificates** provisioned and managed via AWS Certificate Manager (ACM)  
-- **Custom domain and DNS management** using Amazon Route 53  
-
+- React application deployed as static assets to Amazon S3  
+- Global content delivery using Amazon CloudFront (CDN)  
+- HTTPS enabled using AWS Certificate Manager (ACM)  
+- Custom domain configuration with Amazon Route 53  
+- Secure access between CloudFront and S3 (restricted origin access)  
+- Infrastructure provisioning using Terraform (Infrastructure as Code)  
+- Remote Terraform state management using Amazon S3 with locking  
 
 ### 🚧 Challenges:
 
