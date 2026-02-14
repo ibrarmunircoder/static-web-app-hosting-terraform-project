@@ -1,21 +1,18 @@
 ## <p style="text-align:center">🌐 Production-Ready React App on AWS using Terraform </p>
 
+### 📌 Project Overview:
+
+This project demonstrates the end-to-end deployment of a production-ready React application on AWS using Terraform as Infrastructure as Code. The application is hosted on Amazon S3 for static asset storage and served globally through Amazon CloudFront for low-latency content delivery and HTTPS support. Terraform is used to provision and manage all AWS resources in a repeatable, version-controlled manner, showcasing best practices in cloud infrastructure automation, scalability, and security. This project highlights practical DevOps skills, including AWS architecture design, infrastructure automation, and modern frontend deployment workflows.
+
 ### Live Demo:
 
 ![Live Demo Screenshot](./screenshots/app-screenshot.png)
 
-### Problem:
-
-I have a company frontend application designed and developed using a modern React framework. To make it accessible to customers, the application needs to be deployed to an AWS environment. The company has a global presence across more than 20 countries and wants to ensure that users experience fast, reliable, and secure interactions with the application. However, managing and deploying cloud infrastructure manually can introduce human error, lead to inconsistent configurations, and make it difficult to scale and maintain the application efficiently.
 
 ### Architecture Diagram:
 
 ![Diagram 1](./screenshots/arch-1.png)
 ![Diagram 2](./screenshots/arch-2.png)
-
-### 📌 Project Overview:
-
-This project demonstrates the end-to-end deployment of a production-ready React application on AWS using Terraform as Infrastructure as Code. The application is hosted on Amazon S3 for static asset storage and served globally through Amazon CloudFront for low-latency content delivery and HTTPS support. Terraform is used to provision and manage all AWS resources in a repeatable, version-controlled manner, showcasing best practices in cloud infrastructure automation, scalability, and security. This project highlights practical DevOps skills, including AWS architecture design, infrastructure automation, and modern frontend deployment workflows.
 
 ### ⚖️ Design Decisions:
 
@@ -27,7 +24,7 @@ As you know, we have multiple solutions for the same problem. We can use differe
 
 Amazon CloudFront addresses these limitations by acting as a global Content Delivery Network (CDN) in front of S3. CloudFront caches application assets at edge locations closest to users, significantly reducing latency for a globally distributed audience. It also enables secure access via HTTPS, supports custom domain names, reduces direct load on S3, and helps optimise costs by minimising repeated origin requests. This combination ensures fast, secure, and scalable delivery of the application to users worldwide.
 
-### 🚀 Key Features
+### 🚀 Key Features:
 
 - React application deployed as static assets to Amazon S3  
 - Global content delivery using Amazon CloudFront (CDN)  
@@ -43,13 +40,19 @@ Amazon CloudFront addresses these limitations by acting as a global Content Deli
 - Resolved Terraform state conflicts across teams by using remote state locking
 - Reused existing ACM certificate through Terraform data sources
 
-### 🎯 Learning Objectives
+### 🎯 Learning Objectives:
 
-<ul>
+- Understand how to deploy and host a React application using AWS S3 and CloudFront
+- Learn how to design globally available frontend architectures using a CDN
+- Gain hands-on experience with Terraform for Infrastructure as Code (IaC)
+- Implement secure access patterns between CloudFront and S3
 
-<li>Understand how to deploy and host a React application using AWS S3 and CloudFront</li>
-<li>Learn how to design globally available frontend architectures using a CDN</li>
-<li>
-Gain hands-on experience with Terraform for Infrastructure as Code (IaC)</li>
-<li>Implement secure access patterns between CloudFront and S3</li>
-</ul>
+---
+
+## 👨‍💻 Connect with me:
+
+**Ibrar Munir**
+
+Github: https://github.com/ibrarmunircoder </br>
+LinkedIn: https://www.linkedin.com/in/ibrar-munir-53197a16b </br> 
+Portfolio: https://ibrarmunir.d3psh89dj43dt6.amplifyapp.com
